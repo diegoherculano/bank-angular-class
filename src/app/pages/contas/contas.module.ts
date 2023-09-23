@@ -5,9 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/material/material.module';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 @NgModule({
-  declarations: [ListagemComponent],
+  declarations: [ListagemComponent, CadastroComponent],
   imports: [
     CommonModule,
     HttpClientModule,
