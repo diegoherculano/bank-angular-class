@@ -57,7 +57,20 @@
         >
         <mat-form-field class="example-full-width">
           <mat-label>Cliente</mat-label>
-          <input type="number" matInput formControlName="cliente" />
+          <input
+            type="text"
+            matInput
+            [formControl]="myControlClientes"
+            [matAutocomplete]="auto"
+          />
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option
+              *ngFor="let option of filteredOptionsClientes | async"
+              [value]="option.id"
+            >
+              {{ option.nome }}
+            </mat-option>
+          </mat-autocomplete>
         </mat-form-field>
 
         <div class="d-flex justify-content-center">

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [ListagemComponent, CadastroComponent],
