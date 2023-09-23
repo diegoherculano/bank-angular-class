@@ -12,6 +12,14 @@ export class ClienteService {
 
   constructor(private http: HttpClient) {}
 
+  cadastrar(cliente: ICliente): Observable<ICliente> {
+    return this.http.post<ICliente>(this.url, cliente);
+  }
+
+  editar(cliente: ICliente): Observable<ICliente> {
+    return this.http.put<ICliente>(this.url + cliente.id, cliente);
+  }
+
   listar(): Observable<ICliente[]> {
     return this.http.get<ICliente[]>(this.url);
   }
@@ -20,6 +28,10 @@ export class ClienteService {
     return this.http.get<ICliente[]>(
       `${this.url}?page=${page}&pageSize=${pageSize}`
     );
+  }
+
+  pesquisarPorId(idCliente: number): Observable<ICliente> {
+    return this.http.get<ICliente>(`${this.url}${idCliente}`);
   }
 
   deletar(idCliente: number): Observable<object> {

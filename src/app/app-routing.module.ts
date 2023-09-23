@@ -1,11 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListagemComponent } from './pages/clientes/listagem/listagem.component';
+import { CadastroComponent } from './pages/clientes/cadastro/cadastro.component';
 
 const routes: Routes = [
   {
+    path: 'cliente',
+    children: [
+      {
+        path: '',
+        component: ListagemComponent,
+      },
+      {
+        path: 'cadastro',
+        component: CadastroComponent,
+      },
+      {
+        path: 'editar/:id',
+        component: CadastroComponent,
+      },
+    ],
+  },
+  {
     path: '',
-    component: ListagemComponent,
+    pathMatch: 'prefix',
+    redirectTo: 'cliente',
   },
 ];
 
