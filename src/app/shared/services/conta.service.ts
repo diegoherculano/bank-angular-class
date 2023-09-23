@@ -12,6 +12,14 @@ export class ContaService {
 
   constructor(private http: HttpClient) {}
 
+  cadastrar(conta: IContas): Observable<IContas> {
+    return this.http.post<IContas>(this.url, conta);
+  }
+
+  editar(conta: IContas): Observable<IContas> {
+    return this.http.put<IContas>(this.url + conta.id, conta);
+  }
+
   listar(): Observable<IContas[]> {
     return this.http.get<IContas[]>(this.url);
   }
@@ -24,5 +32,9 @@ export class ContaService {
 
   deletar(idConta: number): Observable<object> {
     return this.http.delete(`${this.url}${idConta}`);
+  }
+
+  pesquisarPorId(idConta: number): Observable<IContas> {
+    return this.http.get<IContas>(`${this.url}${idConta}`);
   }
 }
