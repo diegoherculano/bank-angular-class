@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './shared/material/material.module';
 import { ClientesModule } from './pages/clientes/clientes.module';
+import { ContasModule } from './pages/contas/contas.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
@@ -20,6 +21,7 @@ import { ClientesModule } from './pages/clientes/clientes.module';
     FormsModule,
     MaterialModule,
     ClientesModule,
+    ContasModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

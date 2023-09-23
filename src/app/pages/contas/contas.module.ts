@@ -1,0 +1,21 @@
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ListagemComponent } from './listagem/listagem.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+
+@NgModule({
+  declarations: [ListagemComponent],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+export class ContasModule {}
