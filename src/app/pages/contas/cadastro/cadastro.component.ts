@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, map, startWith } from 'rxjs';
 import { ICliente } from 'src/app/shared/models/ICliente';
-import { IContas } from 'src/app/shared/models/contas';
+import { IContas } from 'src/app/shared/models/IContas';
 import { ClienteService } from 'src/app/shared/services/cliente.service';
 import { ContaService } from 'src/app/shared/services/conta.service';
 import Swal from 'sweetalert2';

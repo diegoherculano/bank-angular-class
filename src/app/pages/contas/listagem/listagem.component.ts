@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { IContas } from 'src/app/shared/models/contas';
+import { IContas } from 'src/app/shared/models/IContas';
 import { ContaService } from 'src/app/shared/services/conta.service';
 import Swal from 'sweetalert2';
 

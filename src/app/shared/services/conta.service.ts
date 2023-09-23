@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 import { HttpClient } from '@angular/common/http';
-import { IContas } from '../models/contas';
+import { IContas } from '../models/IContas';
 
 @Injectable({
   providedIn: 'root',
