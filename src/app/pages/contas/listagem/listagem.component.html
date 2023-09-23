@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <h1>Listagem de contas</h1>
 
-    <button mat-raised-button color="primary" routerLink="/cadastro">
+    <button mat-raised-button color="primary" routerLink="/conta/cadastro">
       Nova conta
     </button>
   </div>
@@ -39,7 +39,7 @@
         <mat-icon
           style="cursor: pointer"
           fontIcon="edit"
-          [routerLink]="'/editar/' + element.id"
+          [routerLink]="'/conta/editar/' + element.id"
         ></mat-icon>
         <mat-icon
           style="cursor: pointer"
