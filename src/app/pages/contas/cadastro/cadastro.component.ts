@@ -21,7 +21,7 @@ export class CadastroComponent {
   filteredOptionsClientes!: Observable<ICliente[]>;
   editarPage = false;
   formGroup: FormGroup;
-  clientes!: ICliente[];
+  clientes: ICliente[] = [];
 
   constructor(
     private clienteService: ClienteService,
