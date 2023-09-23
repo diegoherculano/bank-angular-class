@@ -31,9 +31,21 @@ export class ListagemComponent implements AfterViewInit {
   }
 
   listarClientes(page: number, pageSize: number) {
+    Swal.showLoading();
+
     this.clienteService.listarPaginado(page, pageSize).subscribe({
-      next: (clientes) => (this.dataSource.data = clientes),
-      error: (err) => console.log(err),
+      next: (clientes) => {
+        this.dataSource.data = clientes;
+        Swal.close();
+      },
+      error: (err) => {
+        console.log(err);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Erro ao listar cliente!',
+        });
+      },
     });
   }
 
