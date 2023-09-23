@@ -15,4 +15,14 @@ export class ClienteService {
   listar(): Observable<ICliente[]> {
     return this.http.get<ICliente[]>(this.url);
   }
+
+  listarPaginado(page: number, pageSize: number): Observable<ICliente[]> {
+    return this.http.get<ICliente[]>(
+      `${this.url}?page=${page}&pageSize=${pageSize}`
+    );
+  }
+
+  deletar(idCliente: number): Observable<object> {
+    return this.http.delete(`${this.url}${idCliente}`);
+  }
 }

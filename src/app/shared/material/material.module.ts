@@ -14,11 +14,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {
-  MatDialogModule,
-  MatDialogRef,
-  MatDialog,
-} from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef, MatDialog } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -31,6 +27,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   imports: [
@@ -63,7 +60,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSortModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule,
+    MatNativeDateModule
   ],
   exports: [
     MatIconModule,
@@ -94,7 +91,10 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSortModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule,
-  ],
+    MatNativeDateModule
+  ]
 })
-export class MaterialModule {}
+
+export class MaterialModule {
+}
+
