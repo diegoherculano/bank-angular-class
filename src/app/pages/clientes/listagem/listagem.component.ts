@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { ICliente } from 'src/app/shared/models/cliente';
+import { ICliente } from 'src/app/shared/models/ICliente';
 import { ClienteService } from 'src/app/shared/services/cliente.service';
 import Swal from 'sweetalert2';
 
