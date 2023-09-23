@@ -57,6 +57,7 @@ export class CadastroComponent implements OnInit {
       const tipo: 'cadastrar' | 'editar' = this.editarPage
         ? 'editar'
         : 'cadastrar';
+      Swal.showLoading();
 
       this.clienteService[tipo](cliente).subscribe({
         next: () => {
