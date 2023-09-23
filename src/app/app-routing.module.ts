@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListagemComponent } from './pages/clientes/listagem/listagem.component';
 import { ListagemComponent as ListagemComponentContas } from './pages/contas/listagem/listagem.component';
 import { CadastroComponent } from './pages/clientes/cadastro/cadastro.component';
+import { CadastroComponent as CadastroComponentContas } from './pages/contas/cadastro/cadastro.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,14 @@ const routes: Routes = [
       {
         path: '',
         component: ListagemComponentContas,
+      },
+      {
+        path: 'cadastro',
+        component: CadastroComponentContas,
+      },
+      {
+        path: 'editar/:id',
+        component: CadastroComponentContas,
       },
     ],
   },
@@ -30,11 +39,6 @@ const routes: Routes = [
         component: CadastroComponent,
       },
     ],
-  },
-  {
-    path: '',
-    pathMatch: 'prefix',
-    redirectTo: 'cliente',
   },
 ];
 

@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-between">
     <h1>Listagem de clientes</h1>
 
-    <button mat-raised-button color="primary" routerLink="/cadastro">
+    <button mat-raised-button color="primary" routerLink="/cliente/cadastro">
       Novo cliente
     </button>
   </div>
@@ -41,7 +41,7 @@
         <mat-icon
           style="cursor: pointer"
           fontIcon="edit"
-          [routerLink]="'/editar/' + element.id"
+          [routerLink]="'/cliente/editar/' + element.id"
         ></mat-icon>
         <mat-icon
           style="cursor: pointer"
